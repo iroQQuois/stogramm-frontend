@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap');
+
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: #0B0E27;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*--------------------*/
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0B0E27;
+    padding: 10px;
+    font-family: "Sarala", Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.form {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sarala', Helvetica, sans-serif;
+    background-color: #1B1D43;
+    padding: 20px 20px 40px;
+    margin-top: 80px;
+}
+
+.title_main {
+    display: inline-block;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 82px;
+    text-align: center;
+    border-bottom: 5px solid #405DE6;
+    margin: auto;
+    color: #FFFFFF;
+}
+
+.upload_foto {
+    margin: 40px 0 113px;
+    max-width: 1080px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.photo_input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.description_textar {
+    background: #192648;
+    margin-bottom: 10px;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    resize: none;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 6px 6px;
+    height: 135px;
+    transition: all 0.3s ease;
+}
+
+.description_textar:hover,
+.description_textar:focus {
+    background: rgba(64, 93, 230, 0.5);
+}
+
+.friend_card .unsubj {
+    transition: all 0.3s ease;
+}
+
+.friend_card .unsubj:hover {
+    background: rgba(64, 93, 230, 0.5);
+
+}
+
+.meta_input {
+    box-sizing: border-box;
+    background: #192648;
+    margin-bottom: 30px;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 6px 6px;
+    transition: all 0.3s ease;
+}
+
+.meta_input:hover,
+.meta_input:focus {
+    background: rgba(64, 93, 230, 0.5);
+}
+
+.photo_input_label {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    border: 3px dashed #405DE6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.input_foto_wrap {
+    width: 100%;
+    max-width: 500px;
+}
+
+.wrap_descript {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+}
+
+.wrap_descript._login,
+.wrap_descript._registr {
+    margin: 0;
+}
+
+.btn_cantainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.btn {
+    border: 5px solid rgba(64, 93, 230, 0.5);
+    width: 100%;
+    max-width: 350px;
+    height: 55px;
+    background-color: #1B1D43;
+    font-family: 'Sarala', sans-serif;
+    border-radius: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(64, 93, 230, 0.5);
+}
+
+.btn_cantainer_main {
+    justify-content: flex-end;
+}
+
+.radio_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.radio_container input[type=radio] {
+    display: none;
+}
+
+.radio_container label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 0;
+    line-height: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.radio_container label {
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.radio_container label:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: -10px;
+    bottom: -3px;
+    background: url(../src/assets/img/Ellipse2.png) 0 0 no-repeat;
+}
+
+/* Checked */
+.radio_container input[type=radio]:checked+label:before {
+    background: url(../src/assets/img/Group1.png) 0 0 no-repeat;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    background-color: #1B1D43;
+    height: 80px;
+    position: fixed;
+    top: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 120px;
+    justify-content: space-between;
+}
+
+.nav img {
+    width: 50px;
+}
+
+.form._registr {
+    max-width: 800px;
+}
+
+.upload_foto._registr {
+    flex-direction: column-reverse;
+    margin-bottom: 30px;
+    margin-top: 50px;
+
+}
+
+.input_foto_wrap._registr label {
+    height: 45px;
+    border: 3px solid #192648;
+}
+
+.wrap_descript._registr .name {
+    margin-bottom: 20px;
+}
+
+.wrap_descript._registr .pass {
+    margin-bottom: 20px;
+}
+
+.wrap_descript._registr .pass:last-child {
+    margin-bottom: 40px;
+}
+
+.sing_in {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    max-width: 500px;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+    text-align: left;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sing_in a {
+    color: #405DE6;
+    text-decoration: none;
+}
+
+.wrap_descript._login input {
+    margin-bottom: 0;
+}
+
+.wrap_descript._login input.name {
+    margin-bottom: 20px;
+}
+
+.input_foto_wrap.have_photo {
+    background-image: url(../src/assets/img/image1.png);
+    width: 500px;
+    min-width: 500px;
+    height: 500px;
+}
+
+.input_foto_wrap.have_photo label {
+    display: none;
+}
+
+.upload_foto.have_photo {
+    margin-bottom: 60px;
+    align-items: flex-start;
+}
+
+.form.have_photo {
+    margin-top: 250px;
+}
+
+.changepass {
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 80px;
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+}
+
+.avatar_circe {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 249px;
+    height: 249px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #405DE6 0%, #FD1D1D 100%);
+}
+
+.avatar {
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    background-image: url(../src/assets/img/avatar.png);
+    background-repeat: no-repeat;
+}
+
+.avatar.img3 {
+    background-image: url(../src/assets/img/image3.png);
+}
+
+.left_navbar {
+    margin-top: 80px;
+}
+
+.left_navbar .name {
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 52px;
+    text-align: center;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.left_navbar .name_log {
+    font-family: 'Sarala', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #A4A4A4;
+
+}
+
+.left_navbar ul li a {
+    display: flex;
+    align-items: center;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 46px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.left_navbar ul li {
+    margin-bottom: 20px;
+}
+
+.left_navbar ul li img {
+    margin-right: 20px;
+}
+
+.left_navbar ul {
+    width: 300px;
+    margin-top: 40px;
+}
+
+.name_input {
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    /* identical to box height */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.Settings .meta_input {
+    color: #ffffff;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.upload_foto.Settings {
+    margin: 0 auto 57px;
+}
+
+.nav.nav_serch {
+    max-width: 650px;
+}
+
+.wrap_search {
+    width: 100%;
+    max-width: 500px;
+    background: #192648;
+    padding: 8px 6px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.wrap_search img {
+    margin-right: 14px;
+    width: 28px;
+    height: 28px;
+}
+
+.search_input {
+    width: 100%;
+    background: #192648;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.wrap_search:hover {
+    background-color: #2d3c94;
+}
+
+.wrap_search:hover .search_input {
+    background-color: #2d3c94;
+}
+
+.form.wrap_friends {
+    background-color: #0B0E27;
+}
+
+.friend_card {
+    background: #1B1D43;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px;
+    flex: 1 1 auto;
+}
+
+.friend_card .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    min-width: 40px;
+    margin-right: 5px;
+}
+
+.friend_card .unsubj {
+    border: 3px solid rgba(64, 93, 230, 0.8);
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    height: 30px;
+    text-align: center;
+    width: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 5px;
+}
+
+.friend_card .title {
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+
+    color: #FFFFFF;
+}
+
+.friend_card .name_friend {
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ACACAC;
+}
+
+.left_wrap {
+    display: flex;
+    align-items: center;
+}
+
+.upload_foto.friends {
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.subscr {
+    border: 3px solid #405DE6;
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    padding: 4px;
+    width: 108px;
+    color: #FFFFFF;
+    display: block;
+    transition: all 0.3s ease;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.subscr:hover {
+    background-color: rgba(64, 93, 230, 0.5);
+
+
+}
+
+.input_comment textarea:hover,
+.input_comment textarea:focus {
+    background-color: rgba(64, 93, 230, 0.5);
+
+}
+
+.img_other_prof {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.prof_card {
+    max-width: 400px;
+    margin: 40px 20px 0;
+}
+
+.info_post_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.info_post_wrap .avatar {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.info_post_wrap .title {
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.info_post_wrap .name_friend {
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #ACACAC;
+}
+
+.info_post_wrap .left {
+    display: flex;
+}
+
+.right a {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+.popup {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    background-color: #1B1D43;
+
+}
+
+.right_block {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.txt_post {
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.line_post {
+    background: #405DE6;
+    width: 100%;
+    height: 5px;
+    margin: 5px auto 40px;
+}
+
+.txt_coment {
+    background: #192648;
+    padding: 6px;
+    padding-bottom: 48px;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.input_comment {
+    display: flex;
+    align-items: center;
+}
+
+.input_comment textarea {
+    width: 100%;
+    height: 60px;
+    background: #192648;
+    font-family: 'Sarala', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    padding: 5px;
+    color: #FFFFFF;
+    resize: none;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.send_icon:hover path {
+    fill: #ffffff !important;
+}
